@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('mahasiswas', function (Blueprint $table) {
             $table->id();
-            $table->string('id_mahasiswa');
-            $table->string('nama_mahasiswa');
-            $table->string('alamat_mahasiswa');
-            $table->string('nomor_telepon');
+            $table->string('id_mahasiswa', 15);
+            $table->string('nama_mahasiswa', 255);
+            $table->string('alamat_mahasiswa', 255);
+            $table->string('nomor_telepon', 14);
             $table->string('email_mahasiswa');
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
-            $table->string('jenis_kelamin');
+            $table->string('jenis_kelamin', ['Laki-Laki', 'Perempuan']);
             $table->timestamps();
         });
     }

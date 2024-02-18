@@ -1,4 +1,3 @@
-//resources/views/layout/index.blade.php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,5 +14,6 @@
         </div>
     </div>
     @yield('content')
+    <div class="text-center mt-4 text-gray-300 text-sm">Made with <span class="text-red-500">&hearts;</span> by Kelompok3</div>
 </body>
 </html>
