@@ -1,4 +1,4 @@
-//resources/views/home.blade.php
+{{-- resources/views/home.blade.php --}}
 @extends('layout.index')
 @section('title','Home')
 @section('content')
@@ -21,8 +21,8 @@
             <div class="overflow-x-auto sm:mx-6 lg:-mx-8">
                 <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                     <div class="overflow-hidden">
-                        <table class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-700">
-                            <thead class="bg-gray-100 dark:bg-gray-700">
+                        <table class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-200">
+                            <thead class="bg-gray-100 dark:bg-gray-100">
                                 <tr>
                                 <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
                                         #
@@ -59,10 +59,10 @@
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
+                            <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-100 dark:divide-gray-200">
                             
                                 @forelse ($mahasiswas as $mahasiswa)
-                                <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <tr class="hover:bg-gray-100 dark:hover:bg-gray-200">
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{$mahasiswa->id}}</td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             {{$mahasiswa->id_mahasiswa}}

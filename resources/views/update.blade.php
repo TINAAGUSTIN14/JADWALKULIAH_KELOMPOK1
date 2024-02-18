@@ -63,10 +63,10 @@
                     <label for="" class="text-md font-bold">
                         <span class="label-text">Jenis Kelamin</span>
                     </label>
-                    <select class="block w-full border border-emerald-500 outline-emerald-800 px-2 py-2 text-md rounded-md my-2" value="{{$mahasiswas->jenis_kelamin}}" name="jenis_kelamin" id="">
+                    <select class="block w-full border border-emerald-500 outline-emerald-800 px-2 py-2 text-md rounded-md my-2" name="jenis_kelamin" id="">
                         <option disabled="disabled" selected>Pilih Jenis Kelamin</option> 
-					    <option value="Laki-Laki" {{ (old('jenis_kelamin') == "Laki-Laki") ? 'selected' : ""}}> Laki-Laki</option>
-					    <option value="Perempuan" {{ (old('jenis_kelamin') == "Perempuan") ? "selected" : ""}}> Perempuan</option>
+                        <option value="Laki-laki" {{ ($mahasiswas->jenis_kelamin == "Laki-laki") ? 'selected' : ""}}> Laki-Laki</option>
+                        <option value="Perempuan" {{ ($mahasiswas->jenis_kelamin == "Perempuan") ? "selected" : ""}}> Perempuan</option>
                     </select>
                     @error('jenis_kelamin')
                     <span class="text-red-500">{{$message}}</span>
