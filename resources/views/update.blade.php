@@ -1,4 +1,4 @@
-//resources/views/update.blade.php
+{{-- resources/views/update.blade.php --}}
 @extends('layout.index')
 @section('title','Update Mahasiswa')
  
@@ -65,7 +65,7 @@
                     </label>
                     <select class="block w-full border border-emerald-500 outline-emerald-800 px-2 py-2 text-md rounded-md my-2" name="jenis_kelamin" id="">
                         <option disabled="disabled" selected>Pilih Jenis Kelamin</option> 
-                        <option value="Laki-laki" {{ ($mahasiswas->jenis_kelamin == "Laki-laki") ? 'selected' : ""}}> Laki-Laki</option>
+                        <option value="Laki-Laki" {{ ($mahasiswas->jenis_kelamin == "Laki-Laki") ? 'selected' : ""}}> Laki-Laki</option>
                         <option value="Perempuan" {{ ($mahasiswas->jenis_kelamin == "Perempuan") ? "selected" : ""}}> Perempuan</option>
                     </select>
                     @error('jenis_kelamin')

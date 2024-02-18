@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('email_mahasiswa');
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
-            $table->string('jenis_kelamin', ['Laki-laki', 'Perempuan']);
+            $table->string('jenis_kelamin', ['Laki-Laki', 'Perempuan']);
             $table->timestamps();
         });
     }
