@@ -10,6 +10,9 @@
 ## Installation
 
 ```bash
+# Clone
+$ git clone https://github.com/KelompokPadi3/Project-Crud-Laravel.git
+
 $ npm install
 ```
 
