@@ -1,5 +1,5 @@
 <?php
-use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\JadwalKuliahController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,10 +17,10 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [MahasiswaController::class, 'index'])->name('home');
+Route::get('/', [JadwalKuliahController::class, 'index'])->name('home');
 
-Route::get('/create', [MahasiswaController::class, 'create'])->name('create');
-Route::post('/create', [MahasiswaController::class, 'save']);
-Route::get('/delete/{id}', [MahasiswaController::class, 'delete'])->name('delete');
-Route::get('/edit/{id}', [MahasiswaController::class, 'edit'])->name('edit');
-Route::post('/edit/{id}', [MahasiswaController::class, 'update']);
+Route::get('/create', [JadwalKuliahController::class, 'create'])->name('create');
+Route::post('/create', [JadwalKuliahController::class, 'save']);
+Route::get('/delete/{id}', [JadwalKuliahController::class, 'delete'])->name('delete');
+Route::get('/edit/{id}', [JadwalKuliahController::class, 'edit'])->name('edit');
+Route::post('/edit/{id}', [JadwalKuliahController::class, 'update']);

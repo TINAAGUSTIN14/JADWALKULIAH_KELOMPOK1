@@ -11,7 +11,7 @@
             @endif
         <div class="flex justify-between items-center bg-gray-200 p-5 rounded-md">
             <div>
-                <h1 class="text-xl text-semibold">Data Mahasiswa ( {{$total}} )</h1>
+                <h1 class="text-xl text-semibold">Data Jadwal Kuliah ( {{$total}} )</h1>
             </div>
             <div>
                 <a href="{{ route('create') }}" class="px-5 py-2 bg-blue-500 rounded-md text-white text-lg shadow-md">Tambah</a>
@@ -28,28 +28,22 @@
                                         #
                                     </th>
                                     <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                        Id Mahasiswa
+                                        Kode
                                     </th>
                                     <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                        Nama Mahasiswa
+                                        Kelas
                                     </th>
                                     <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                        Alamat Mahasiswa
+                                        Mata Kuliah
                                     </th>
                                     <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                        Nomor Telepon
+                                        Dosen Pengajar
                                     </th>
                                     <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                        Email Mahasiswa
+                                        Hari
                                     </th>
                                     <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                        Tempat Lahir
-                                    </th>
-                                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                        Tanggal Lahir
-                                    </th>
-                                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                        Jenis Kelamin
+                                        Waktu
                                     </th>
                                     <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
                                         Edit
@@ -61,44 +55,38 @@
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-100 dark:divide-gray-200">
                             
-                                @forelse ($mahasiswas as $mahasiswa)
+                                @forelse ($jadwals as $jadwal)
                                 <tr class="hover:bg-gray-100 dark:hover:bg-gray-200">
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{$mahasiswa->id}}</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{$jadwal->id}}</td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            {{$mahasiswa->id_mahasiswa}}
+                                            {{$jadwal->kode}}
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            {{$mahasiswa->nama_mahasiswa}}
+                                            {{$jadwal->kelas}}
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            {{$mahasiswa->alamat_mahasiswa}}
+                                            {{$jadwal->mata_kuliah}}
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            {{$mahasiswa->nomor_telepon}}
+                                            {{$jadwal->dosen_pengajar}}
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            {{$mahasiswa->email_mahasiswa}}
+                                            {{$jadwal->hari}}
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            {{$mahasiswa->tempat_lahir}}
+                                            {{$jadwal->waktu}}
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            {{$mahasiswa->tanggal_lahir}}
+                                            <a href="{{ route('edit', ['id'=>$jadwal->id]) }}" class="px-5 py-2 bg-blue-500 rounded-md text-white text-lg shadow-md">Edit</a>
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            {{$mahasiswa->jenis_kelamin}}
-                                        </td>
-                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            <a href="{{ route('edit', ['id'=>$mahasiswa->id]) }}" class="px-5 py-2 bg-blue-500 rounded-md text-white text-lg shadow-md">Edit</a>
-                                        </td>
-                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            <a href="{{ route('delete', ['id'=>$mahasiswa->id]) }}" class="px-5 py-2 bg-red-500 rounded-md text-white text-lg shadow-md">Delete</a>
+                                            <a href="{{ route('delete', ['id'=>$jadwal->id]) }}" class="px-5 py-2 bg-red-500 rounded-md text-white text-lg shadow-md">Delete</a>
                                         </td>
                                     </tr>
                                     @empty
                                     <tr>
                                         <td>
-                                            <h2>Data Mahasiswa Tidak Ditemukan</h2>
+                                            <h2>Data Jadwal Tidak Ditemukan</h2>
                                         </td>
                                     </tr>
                                     @endforelse

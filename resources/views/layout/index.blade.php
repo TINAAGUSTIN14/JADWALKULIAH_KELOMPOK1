@@ -10,10 +10,9 @@
 <body>
     <div class="p-10">
         <div class="text-center">
-            <h1 class="text-5xl font-bold">Data Mahasiswa</h1>
+            <h1 class="text-5xl font-bold">Data Jadwal</h1>
         </div>
     </div>
     @yield('content')
-    <div class="text-center mt-4 text-gray-300 text-sm">Made with <span class="text-red-500">&hearts;</span> by Kelompok3</div>
-</body>
+    </body>
 </html>
